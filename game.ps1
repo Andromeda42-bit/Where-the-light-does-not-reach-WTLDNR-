@@ -1,6 +1,6 @@
 Write-Host "Where the sun does not reach (WTSDNR)"
 write-host "
-INTODUCTION
+INTRODUCTION
 "
 read-host "Press Enter to continue."
 $name = Read-Host "Let your name be known"
@@ -21,3 +21,23 @@ write-host "
 ------------------------------------------------
 Chapter 1
 ------------------------------------------------"
+write-host "You decide it's time to move..."
+write-host "In the distance, you notice two things.
+
+1. A narrow passage that leads deeper into the cavern.
+
+2. A faint light coming from behind some giant rock formation.
+"
+
+$choice = read-host "Where do you go?"
+
+if ($choice -eq "1") 
+{write-host "
+Carefully, you enter the passage. 
+...
+The air becomes colder."}
+elseif ($choice -eq "2")
+{write-host "
+You approach the faint light.
+...
+You hear voices."}
