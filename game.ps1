@@ -4,6 +4,10 @@ $energy = 80
 $hunger = 20
 $thirst = 30
 
+# Character trust
+$MiraTrust = 25
+$EliasTrust = 50
+
 function ShowPlayerStats 
 {write-host "Health:" $health
 write-host "Energy:" $energy
@@ -64,10 +68,18 @@ if ($choice -eq "1")
  {write-host "The girl turns away, embarassed. 'No... I'm fine. 
 And how would a newcomer like you be of help anyway?' She pauses and seems to be thinking of something.
 'I haven't seen you before. You're new here, aren't you?' 
-She doesn't wait for your response. 'Anyway... it doesn't matter.'"}
+She doesn't wait for your response. 'Anyway... it doesn't matter.' 
+She pauses, realising she might've sounded a little too harsh. 
+'I appreciate you wanting to help, but i don't think you'll be able to understand the map."
+$MiraTrust += 5
+write-host "The girl seems to trust you a little more.
+Her trust: $MiraTrust/100"}
 elseif ($choice -eq "2")
  {write-host "She glances at you suspiciously. 'And why do you care? Don't you know the rules here?
-In this place, everybody minds their own buisness.'"}}
+In this place, everybody minds their own buisness.'"
+$MiraTrust -= 5
+write-host "The girl is a little suspicius of you. Her trust: $MiraTrust/100"}}
+
 elseif ($choice -eq "2")
  {write-host "
 You approach the faint light.
@@ -83,6 +95,7 @@ You could:
 1. Accept his offer and come with him.
 2. Ask him about where the light was coming from and what is this place."
 $choice = read-host "What do you choose?"
+
 if ($choice -eq "1")
  {write-host "The man's face lights up. Perfect! I know everybody fears ending up here, 
 that's why i want to make everyone feel welcomed.
@@ -91,9 +104,15 @@ You tell him your name.
 'Oh, and interesting name. I've never heard anything quite like it before. You must be from really far away.
 I wonder how did you even end up in a place like this?' He shakes his head.
 'Well, that's none of my buisness. Nice to meet you, $name'
-You wonder if you should ask him about this place. You hesiate but ultimately decide not to."}
+You wonder if you should ask him about this place. You hesiate but ultimately decide not to."
+$EliasTrust += 5
+write-host "Elias seems to trust you a little more. 
+Elias' trust: $EliasTrust/100"}
 elseif ($choice -eq "2")
  {write-host "The man looks around cautiously, then shakess his head.
 'This... is not the best place to talk. Let's just... move.'
 He starts walking, then looks at you again.
-'Come on.' He says before looking back towards the faint light once more, then continuing to walk wih a faster pace."}}
+'Come on.' He says before looking back towards the faint light once more, then continuing to walk wih a faster pace."
+$EliasTrust -= 5
+write-host "Elias is a little suspicious of you. 
+Elias' trust: $EliasTrust/100"}}
