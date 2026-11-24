@@ -15,3 +15,12 @@ This file documents the development of my game made for Bashed (a Hack Club ysws
  - Basic game structure
  - The narration for chapter 0 - introduction is complete (probably? I think changes will be made)
  - Chapter 1 is started
+
+## 24 November 2026
+
+### Added
+ - Continued making the story
+ - Added 4 more paths the player can end up on
+ - designed the player stats system that will be displayed at the beginning of every chapter (more additions coming soon)
+ - designed and implemented the character trust system
+ - designed two characters (more coming soon) that the player can interact with based on trust
