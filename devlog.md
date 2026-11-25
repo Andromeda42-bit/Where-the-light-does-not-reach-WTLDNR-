@@ -24,3 +24,10 @@ This file documents the development of my game made for Bashed (a Hack Club ysws
  - designed the player stats system that will be displayed at the beginning of every chapter (more additions coming soon)
  - designed and implemented the character trust system
  - designed two characters (more coming soon) that the player can interact with based on trust
+
+## 25 November 2026
+
+### Added
+ - Added imput validation for player choices (The bugs that came with this were crazyyy T_T)
+ - Added character trust limits
+ - Continued the story (Chapter 1 is almost finished)
