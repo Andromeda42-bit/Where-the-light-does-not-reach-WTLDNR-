@@ -8,6 +8,17 @@ $thirst = 30
 $MiraTrust = 25
 $EliasTrust = 50
 
+#Limits
+if ($MiraTrust -gt 100)
+ {$MiraTrust = 100}
+if ($MiraTrust -lt 0)
+ {$MiraTrust = 0}
+
+if ($EliasTrust -gt 100)
+ {$EliasTrust = 100}
+if ($EliasTrust -lt 0)
+ {$EliasTrust = 0}
+ 
 function ShowPlayerStats 
 {write-host "Health:" $health
 write-host "Energy:" $energy
