@@ -74,7 +74,9 @@ The siluette of a frail woman reveals itself. Immediately after noticing you,
 her dark brown eyes narrow and she quickly hides a worn piece of paper behind her back.
 She doesn't utter a word, so you decide to speak first."
 write-host "What do you say?
+
 1. You're trying to read that map, aren't you? I think i can help.
+
 2. Why are you hiding that?"
 $dchoice = ""
 while ($dchoice -ne "1" -and $dchoice -ne "2")
@@ -92,6 +94,7 @@ She pauses, realising she might've sounded a little too harsh.
 $MiraTrust += 5
 write-host "The girl seems to trust you a little more.
 Her trust: $MiraTrust/100"
+read-host "Press Enter to continue..."
 write-host "She looks at you, as though she wanted to say something.
 Just then, a loud toll of a bell can be heard in the distance.
 Her face immediately becomes worried. 'We need to run.'
@@ -101,7 +104,28 @@ She hides the map in her bag and begins walking away.
 After a few steps, she turns back.
 'The bell... It means danger. That's all i can say...'
 As those words leave her mouth, her body was already turned away from you.
-The girl scutteled away, before you could say anything."}
+The girl scutteled away, before you could say anything."
+write-host "You are left in the dark passage alone. You look around.
+...
+There was a deafening silence. Your hands squeeze together.
+There was barely any light left, as the girl walked away with her lantern.
+Your survival instincts kick in. You decide to:
+
+1. Follow the girl quietly, so she doesn't notice you
+
+2. Wander deeper into the passage. The girl didn't look welcoming either way..."
+
+$pathchoice = ""
+while ($pathchoice -ne "1" -and $pathchoice -ne "2")
+ {$pathchoice = read-host "You decide that"
+ if ($pathchoice -ne "1" -and $pathchoice -ne "2") 
+ {write-host "Hmm.. maybe you should think it over."}}
+
+if($pathchoice -eq "1")
+ {write-host "After some hesitation, you start quietly walking after the girl, 
+following the light of her lantern.
+You try to keep your footsteps light, thus, you can only hear your own breathing.
+...."}}
 
 elseif ($dchoice -eq "2")
  {write-host "She glances at you suspiciously. 'And why do you care? Don't you know the rules here?
@@ -125,7 +149,9 @@ You nod.
 'Me and my group were just going back to the settlement. If you want, you can come with us so i can show you around.'
 You think for a moment. Finally, you met actual life down here. But you still have so many questions.
 You could:
+
 1. Accept his offer and come with him.
+
 2. Ask him about where the light was coming from and what is this place."
 
 $dchoice = ""
@@ -146,6 +172,7 @@ You wonder if you should ask him about this place. You hesiate but ultimately de
 $EliasTrust += 5
 write-host "Elias seems to trust you a little more. 
 Elias' trust: $EliasTrust/100"
+read-host "Press Enter to continue..."
 write-host "Suddenly, a bell could be heard ringing from a distance.
 Everybody in the group becomes a little uneasy.
 Elias turns to you, trying to not appear panicked himself.
@@ -158,5 +185,9 @@ He starts walking, then looks at you again.
 $EliasTrust -= 5
 write-host "Elias is a little suspicious of you. 
 Elias' trust: $EliasTrust/100"}
-write-host "As you and the group walked, the loud toll of a bell could be heard.
+read-host "Press Enter to continue..."
+write-host "You flollow him and his group. 
+As all of you move, the ginger looks at you with a small smile.
+'My name is Elias, by the way. I'm the guide around these parts.'
+As you and the group walked, the loud toll of a bell could be heard.
 Elias takes a deep breath. 'Perfect. We'll arive just in time.'"}
