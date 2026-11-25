@@ -47,8 +47,11 @@ write-host "In the distance, you notice two things.
 
 2. A faint light coming from behind some giant rock formation.
 "
-
-$choice = read-host "Where do you go?"
+$choice = ""
+while ($choice -ne "1" -and $choice -ne "2")
+ {$choice = read-host "Where do you go?"
+ if ($choice -ne "1" -and $choice -ne "2") 
+  {write-host "Hmm... Maybe you should think it over."}}
 
 if ($choice -eq "1") 
 {write-host "
@@ -62,7 +65,11 @@ She doesn't utter a word, so you decide to speak first."
 write-host "What do you say?
 1. You're trying to read that map, aren't you? I think i can help.
 2. Why are you hiding that?"
-$choice = read-host "You decide to say"
+$choice = ""
+while ($choice -ne "1" -and $choice -ne "2")
+ {$choice = read-host "You decide to say"
+ if ($choice -ne "1" -and "2")
+  {write-host "Hmm... maybe you should think it over."}}
 
 if ($choice -eq "1")
  {write-host "The girl turns away, embarassed. 'No... I'm fine. 
@@ -74,11 +81,14 @@ She pauses, realising she might've sounded a little too harsh.
 $MiraTrust += 5
 write-host "The girl seems to trust you a little more.
 Her trust: $MiraTrust/100"}
+
 elseif ($choice -eq "2")
  {write-host "She glances at you suspiciously. 'And why do you care? Don't you know the rules here?
 In this place, everybody minds their own buisness.'"
 $MiraTrust -= 5
 write-host "The girl is a little suspicius of you. Her trust: $MiraTrust/100"}}
+
+#ELIAS
 
 elseif ($choice -eq "2")
  {write-host "
@@ -94,7 +104,12 @@ You think for a moment. Finally, you met actual life down here. But you still ha
 You could:
 1. Accept his offer and come with him.
 2. Ask him about where the light was coming from and what is this place."
-$choice = read-host "What do you choose?"
+
+$choice = ""
+if ($choice -ne "1" -and $choice -ne "2")
+ {$choice = read-host "What do you choose?"
+  if ($choice -ne "1" -and $choice -ne "2")
+   {write-host "Hmm... maybe you should think it over."}}
 
 if ($choice -eq "1")
  {write-host "The man's face lights up. Perfect! I know everybody fears ending up here, 
