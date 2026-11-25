@@ -47,13 +47,13 @@ write-host "In the distance, you notice two things.
 
 2. A faint light coming from behind some giant rock formation.
 "
-$choice = ""
-while ($choice -ne "1" -and $choice -ne "2")
- {$choice = read-host "Where do you go?"
- if ($choice -ne "1" -and $choice -ne "2") 
+$pathchoice = ""
+while ($pathchoice -ne "1" -and $pathchoice -ne "2")
+ {$pathchoice = read-host "Where do you go?"
+ if ($pathchoice -ne "1" -and $pathchoice -ne "2") 
   {write-host "Hmm... Maybe you should think it over."}}
 
-if ($choice -eq "1") 
+if ($pathchoice -eq "1") 
 {write-host "
 Carefully, you enter the passage. 
 ...
@@ -65,13 +65,13 @@ She doesn't utter a word, so you decide to speak first."
 write-host "What do you say?
 1. You're trying to read that map, aren't you? I think i can help.
 2. Why are you hiding that?"
-$choice = ""
-while ($choice -ne "1" -and $choice -ne "2")
- {$choice = read-host "You decide to say"
- if ($choice -ne "1" -and "2")
+$dchoice = ""
+while ($dchoice -ne "1" -and $dchoice -ne "2")
+ {$dchoice = read-host "You decide to say"
+ if ($dchoice -ne "1" -and $dchoice -ne "2")
   {write-host "Hmm... maybe you should think it over."}}
 
-if ($choice -eq "1")
+if ($dchoice -eq "1")
  {write-host "The girl turns away, embarassed. 'No... I'm fine. 
 And how would a newcomer like you be of help anyway?' She pauses and seems to be thinking of something.
 'I haven't seen you before. You're new here, aren't you?' 
@@ -82,7 +82,7 @@ $MiraTrust += 5
 write-host "The girl seems to trust you a little more.
 Her trust: $MiraTrust/100"}
 
-elseif ($choice -eq "2")
+elseif ($dchoice -eq "2")
  {write-host "She glances at you suspiciously. 'And why do you care? Don't you know the rules here?
 In this place, everybody minds their own buisness.'"
 $MiraTrust -= 5
@@ -90,8 +90,8 @@ write-host "The girl is a little suspicius of you. Her trust: $MiraTrust/100"}}
 
 #ELIAS
 
-elseif ($choice -eq "2")
- {write-host "
+elseif ($pathchoice -eq "2")
+  {write-host "
 You approach the faint light.
 ...
 You hear voices. As you get closer, you notice a group of people walking.
@@ -105,13 +105,13 @@ You could:
 1. Accept his offer and come with him.
 2. Ask him about where the light was coming from and what is this place."
 
-$choice = ""
-if ($choice -ne "1" -and $choice -ne "2")
- {$choice = read-host "What do you choose?"
-  if ($choice -ne "1" -and $choice -ne "2")
+$dchoice = ""
+while ($dchoice -ne "1" -and $dchoice -ne "2")
+ {$dchoice = read-host "What do you choose?"
+  if ($dchoice -ne "1" -and $dchoice -ne "2")
    {write-host "Hmm... maybe you should think it over."}}
 
-if ($choice -eq "1")
+if ($dchoice -eq "1")
  {write-host "The man's face lights up. Perfect! I know everybody fears ending up here, 
 that's why i want to make everyone feel welcomed.
 He pauses, then says 'By the way, my name is Elias. What's yours.'
@@ -123,7 +123,7 @@ You wonder if you should ask him about this place. You hesiate but ultimately de
 $EliasTrust += 5
 write-host "Elias seems to trust you a little more. 
 Elias' trust: $EliasTrust/100"}
-elseif ($choice -eq "2")
+elseif ($dchoice -eq "2")
  {write-host "The man looks around cautiously, then shakess his head.
 'This... is not the best place to talk. Let's just... move.'
 He starts walking, then looks at you again.
