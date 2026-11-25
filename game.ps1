@@ -18,7 +18,7 @@ if ($EliasTrust -gt 100)
  {$EliasTrust = 100}
 if ($EliasTrust -lt 0)
  {$EliasTrust = 0}
- 
+
 function ShowPlayerStats 
 {write-host "Health:" $health
 write-host "Energy:" $energy
@@ -91,13 +91,25 @@ She pauses, realising she might've sounded a little too harsh.
 'I appreciate you wanting to help, but i don't think you'll be able to understand the map."
 $MiraTrust += 5
 write-host "The girl seems to trust you a little more.
-Her trust: $MiraTrust/100"}
+Her trust: $MiraTrust/100"
+write-host "She looks at you, as though she wanted to say something.
+Just then, a loud toll of a bell can be heard in the distance.
+Her face immediately becomes worried. 'We need to run.'
+Her eyes scan the souroundings, then land on you.'
+'Sorry, I haven't seen you before, so I can't trust you.' She says with guilt.
+She hides the map in her bag and begins walking away.
+After a few steps, she turns back.
+'The bell... It means danger. That's all i can say...'
+As those words leave her mouth, her body was already turned away from you.
+The girl scutteled away, before you could say anything."}
 
 elseif ($dchoice -eq "2")
  {write-host "She glances at you suspiciously. 'And why do you care? Don't you know the rules here?
 In this place, everybody minds their own buisness.'"
 $MiraTrust -= 5
-write-host "The girl is a little suspicius of you. Her trust: $MiraTrust/100"}}
+write-host "The girl is a little suspicius of you. Her trust: $MiraTrust/100"}
+write-host "Suddenly, a bell ringing could be heard. The girl's face immediately hardens.
+'I have to go.' She says coldly before turning away from you, walking away in fast, hurried steps."}
 
 #ELIAS
 
@@ -133,7 +145,11 @@ I wonder how did you even end up in a place like this?' He shakes his head.
 You wonder if you should ask him about this place. You hesiate but ultimately decide not to."
 $EliasTrust += 5
 write-host "Elias seems to trust you a little more. 
-Elias' trust: $EliasTrust/100"}
+Elias' trust: $EliasTrust/100"
+write-host "Suddenly, a bell could be heard ringing from a distance.
+Everybody in the group becomes a little uneasy.
+Elias turns to you, trying to not appear panicked himself.
+'Alright, let's pick up the pace and get moving.'"}
 elseif ($dchoice -eq "2")
  {write-host "The man looks around cautiously, then shakess his head.
 'This... is not the best place to talk. Let's just... move.'
@@ -141,4 +157,6 @@ He starts walking, then looks at you again.
 'Come on.' He says before looking back towards the faint light once more, then continuing to walk wih a faster pace."
 $EliasTrust -= 5
 write-host "Elias is a little suspicious of you. 
-Elias' trust: $EliasTrust/100"}}
+Elias' trust: $EliasTrust/100"}
+write-host "As you and the group walked, the loud toll of a bell could be heard.
+Elias takes a deep breath. 'Perfect. We'll arive just in time.'"}
