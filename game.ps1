@@ -163,7 +163,18 @@ The guard lets out a relieved breath. 'I will call Rowan...'
 'The one responsible for the newcomers.' Mira, who's been standing aside, watching you, says.
 'Your name is on the list.' She continues bluntly. 'Maybe i was a little wrong with mt first impression about you.'"
 $MiraTrust += 10
-write-host "Mira seems to trust you a little more. Her trust: $MiraTrust/100"}}
+write-host "Mira seems to trust you a little more. Her trust: $MiraTrust/100"}
+
+elseif ($pathchoice -eq "2")
+{write-host "You watch the girl dissapear into the darkness, the light of her lantern getting dimmer and dimmer..
+Eventually, you turn the other way. Perhaps following a stranger wasn't exactly the brightest idea.
+You continue walking down the passage.
+The more you walk, the more noticeable do the sounds around you become.
+With the occassional dripping of water, you also hear... voices.
+Voices? Here?
+You slow down and looks around.
+Someone is here..."
+read-host "Press Enter to continue..."}}
 
 elseif ($dchoice -eq "2")
  {write-host "She glances at you suspiciously. 'And why do you care? Don't you know the rules here?
