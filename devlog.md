@@ -31,3 +31,10 @@ This file documents the development of my game made for Bashed (a Hack Club ysws
  - Added imput validation for player choices (The bugs that came with this were crazyyy T_T)
  - Added character trust limits
  - Continued the story (Chapter 1 is almost finished)
+
+## 26 November 2026
+
+### Added
+ - Added the end of Chapter 1 for one of the player's choices
+ - Started writing the end of Chapter 1 for another one of the player's choices
+ - Started writing the part of the story where the player meets another new character
