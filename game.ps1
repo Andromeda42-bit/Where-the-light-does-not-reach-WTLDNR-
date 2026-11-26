@@ -35,6 +35,7 @@ $name = Read-Host "Let your name be known"
 Write-Host "
 Welcome, $name..."
 read-host "Press Enter to continue."
+
 write-host "........."
 write-host "You open you eyes..."
 write-host "It's dark. You can barely see anything.
@@ -84,6 +85,8 @@ while ($dchoice -ne "1" -and $dchoice -ne "2")
  if ($dchoice -ne "1" -and $dchoice -ne "2")
   {write-host "Hmm... maybe you should think it over."}}
 
+  #MIRA
+
 if ($dchoice -eq "1")
  {write-host "The girl turns away, embarassed. 'No... I'm fine. 
 And how would a newcomer like you be of help anyway?' She pauses and seems to be thinking of something.
@@ -121,11 +124,46 @@ while ($pathchoice -ne "1" -and $pathchoice -ne "2")
  if ($pathchoice -ne "1" -and $pathchoice -ne "2") 
  {write-host "Hmm.. maybe you should think it over."}}
 
+# TO THE SETTELMENT
+
 if($pathchoice -eq "1")
  {write-host "After some hesitation, you start quietly walking after the girl, 
 following the light of her lantern.
 You try to keep your footsteps light, thus, you can only hear your own breathing.
-...."}}
+....
+You follow her carefully and soon, the passage starts to widen, the air starts to feel warmer ,
+and faint voices echo somwhere ahead.
+As you inch closer, you notice... something unusual up ahead.
+Light...
+Actually,not just one light... but hundreds... hundreds of lights shining somwhere in the distance.
+Your pace slows down as you look around you. Your eyes widen.
+The walls of the cavern had hunnderds of small, wooden houses. 
+Giant, narrow bridges stretched between the walls.
+The light that you saw from the distance were coming from the houses, as well as from the lanterns hanging from ropes.
+If you would narrow your eyes, you would see people.
+Actual people. Just going about their daily lives. As if this was normal. As if they were still above ground."
+read-host "Press enter to continue"
+write-host "The girl stops by the entrance of the settlement, where two guards werre standing.
+One of the guards looks at her. 'Mira, you're back. It's good you came back in time.'
+'Yes.' The girl - Mira, replies shortly.
+You notice Mira hand them a document. As the soliders are checking it, 
+you realise they probably won't let you in that easily.
+Just as you were about to walk away, the soldiers finish checking the document and notice you.
+'Who are you? I've never seen you before.'
+'They're someone i met while scouting. Probably a newcomer.' Mira says, looking at you briefly.
+'Do you have a permit?' The guard asks whie looking at you.
+You shake your head.
+The guards brows furrow. 'That's weird. Usually, every newcomer gets a permit.'
+In the distance, the bell could be heard once more.
+'Hold on. Tell me your name, maybe i can find you on the list of newcomers.'
+The man looks through the list frantically.
+'$name... $name... oh... there you go, i found you.'
+The guard lets out a relieved breath. 'I will call Rowan...'
+'Who?' You mutter quietly, but the guard doesn't hear you.
+'The one responsible for the newcomers.' Mira, who's been standing aside, watching you, says.
+'Your name is on the list.' She continues bluntly. 'Maybe i was a little wrong with mt first impression about you.'"
+$MiraTrust += 10
+write-host "Mira seems to trust you a little more. Her trust: $MiraTrust/100"}}
 
 elseif ($dchoice -eq "2")
  {write-host "She glances at you suspiciously. 'And why do you care? Don't you know the rules here?
