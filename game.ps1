@@ -174,7 +174,57 @@ With the occassional dripping of water, you also hear... voices.
 Voices? Here?
 You slow down and looks around.
 Someone is here..."
-read-host "Press Enter to continue..."}}
+read-host "Press Enter to continue...
+You slowly follow the source of the voices.
+A narrow opening leads deeper into the underground.
+You start noticing a faint light coming from afar.
+Then, you notice its source. A small cottage on the side of the cavern.
+Hesitantly, you approach the small cottage. It's door was opened, so you decide to peek.
+Inside, an older woman was sitting beside a table, carefullt wrapping some cloth around someone's arm.
+The stone walls of the cottage were full of shelves that were full of glass bottles, hers and books.
+'There. That should hold for now'
+The injured man smiles gratefully. 'Thank you, Sera.'
+'You should be thanking me by actually being more careful next time.'
+The woman says with a stern expression.
+Just as the man gets up and leaves, she notices you in the doorway.
+'Oh hello there.'
+She observes your unfamiliar appearance. 'I don't think i've seen you around here before.'"
+write-host "You pause and think of what to say.
+
+1. 'I don't know where i am or how i got here. Could you help me?'
+
+2. 'I'm fine. I'm just looking around.'"
+
+$dchoice = ""
+while ($dchoice -ne "1" -and $dchoice -ne "2")
+ {$dchoice = read-host "What do you choose?"
+  if ($dchoice -ne "1" -and $dchoice -ne "2")
+   {write-host "Hmm... maybe you should think it over."}}
+  
+if($dchoice -eq "1")
+{write-host "Her expression immediately.
+'You don't know where ypu are?' She asks while beginning to approach you.
+'Are you hurt? HAve you been wandering through here alone?'
+You stay silent, unsure of how to answer.
+'Well, you certainly shouldn't be out here by yourself. Come. I'll takke you somwhere safer.'"}
+
+eleseif ($dchoice -eq "2")
+{write-host "The woman thinks for a moment.
+'I see... well, in my eyes, you look pretty lost while wandering around here.'
+She looks around. 'I wouldn't recommend wandering around here alone while not knowing where you're going.'
+She gathers her supplies and gets up. 'I'm heading back to the settlement. If you want, you can accompany me.'"}
+
+write-host "You two begin to walk back in the direction you came from.
+Eventually, the woman speaks up. 'You must have a lot of questions. Most newcomers do.'
+'What is this place?' You ask.
+She stays quiet for a little before replying. 'This place... has existed for longer than most people here can remember...'
+She notices the curiosity in your eyes. She stays quiet again, longer this time.
+'It's... a rather long story.' She says with a sigh.
+'I think you'll be better off hearing it from someone who knows how to tell it properly.'"
+read-host "Press Enter to continue..."
+write-host "Slowly, the passage begins to widen. The air starts feeling warmer. And you notice something.
+Light. Not just one. But hundreds. Hundreds of them shining somwhere in the distance.
+You slow down and you look around you. Your eyes widen."}}
 
 elseif ($dchoice -eq "2")
  {write-host "She glances at you suspiciously. 'And why do you care? Don't you know the rules here?
