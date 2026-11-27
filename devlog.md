@@ -38,3 +38,9 @@ This file documents the development of my game made for Bashed (a Hack Club ysws
  - Added the end of Chapter 1 for one of the player's choices
  - Started writing the end of Chapter 1 for another one of the player's choices
  - Started writing the part of the story where the player meets another new character
+
+## 27 November 2026
+
+### Added
+ - Added the introduction for another new character(Sera)
+ - Almost finished the end of chapter 1 for another one of the player's choices
